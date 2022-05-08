@@ -1,10 +1,7 @@
-{ avr ? true, arm ? true, teensy ? true }:
+{ avr ? false, arm ? true, teensy ? false }:
 let
-  # We specify sources via Niv: use "niv update nixpkgs" to update nixpkgs, for example.
-  sources = import ./util/nix/sources.nix { };
-  pkgs = import sources.nixpkgs { };
-
-  poetry2nix = pkgs.callPackage (import sources.poetry2nix) { };
+  pkgs = import <nixpkgs> { };
+  poetry2nix = pkgs.poetry2nix;
 
   # Builds the python env based on nix/pyproject.toml and
   # nix/poetry.lock Use the "poetry update --lock", "poetry add

@@ -61,4 +61,4 @@
 #define CAPS_LOCK_LED_INDEX 45
 
 /* Total size of the EEPROM storage in bytes */
-#define TRANSIENT_EEPROM_SIZE 1024
+#define TRANSIENT_EEPROM_SIZE 2048
